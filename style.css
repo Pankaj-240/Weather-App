@@ -167,6 +167,7 @@ body {
 
 @media (max-width:426px) {
   .container{
+    height: 50%;
     width: 90%;
     #cityInput{
       height: 18%;

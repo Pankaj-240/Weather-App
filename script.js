@@ -40,7 +40,7 @@ btn.addEventListener("click", () => {
     alert("Enter the city Name")
   }
   else{
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=971162df8a341c749f777e92d8ad35aa`;
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=00a4e3e8828625c221b25b0965193ae8`;
   container.style.height = "280px";
   showData(url);
   }
