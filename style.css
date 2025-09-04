@@ -1,0 +1,199 @@
+:root{
+    --text-color:#495057;
+
+    --container-shadow: 0px 0px 80px rgba(43, 183, 234, 0.8);
+    --searchBox-shadow: 8px 5px 21px rgba(126, 126, 126, 0.5);
+
+    --searchBox-border: 1px solid rgba(255, 255, 255, .3);
+    --container-border:  1px solid rgba(255, 255, 255, 0);
+
+    --searchBox-bgColor: transparent;
+
+    --switch-bgColor: #6f8fa44e;
+
+    --switch-fill:rgba(9, 34, 43, 0.467);
+
+    --bg-image: url(bg1.jpg);
+
+}
+
+.darkMode{
+    --text-color:#a4a5b8;
+
+    --container-shadow: 0 3px 5px 2px rgb(37,37,39);
+    --searchBox-shadow:  0 3px 5px 2px rgb(37,37,39);
+
+    --searchBox-border: 2px solid rgb(37,37,39);
+    --container-border:  2px solid rgb(37,37,39);
+
+    --searchBox-bgColor: #3a435d;
+
+    --switch-bgColor: #4a4a4d96;
+
+    --switch-fill:rgba(3, 9, 12, 0.774);
+
+    --bg-image: url(bg2.jpg);
+}
+
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+#theme-switch{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--switch-bgColor);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch svg{
+  fill: var(--switch-fill);
+}
+
+#theme-switch svg:first-child{
+  display:none;
+}
+
+.darkMode #theme-switch svg:last-child{
+  display:none;
+}
+
+.darkMode #theme-switch svg:first-child{
+  display:block;
+}
+
+html,
+body {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  height: 110%;
+  width: 110%;
+  position: fixed;
+  background: var(--bg-image);
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+}
+
+.container {
+  height: 350px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: var(--container-border);
+  box-shadow: var(--container-shadow);
+  overflow: auto;
+}
+.searchBox {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  #cityInput {
+    background-color: var(--searchBox-bgColor);
+    color: var(--text-color);
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: large;
+    border: var(--searchBox-border);
+    box-shadow: var(--searchBox-shadow);
+  }
+  #searchBtn {
+    border-radius: 10px;
+    background-color: var(--searchBox-bgColor);
+    width: 300px;
+    height: 50px;
+    font-size: large;
+    border: var(--searchBox-border);
+    box-shadow: var(--searchBox-shadow);
+  }
+}
+#weatherResult {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
+  border-radius: 0px 0px 20px 20px;
+  flex: 1;
+}
+
+
+
+.convert{
+  display: none;
+}
+
+.convertBtn{
+  height: 25px;
+  width: 25px;
+  background-color:transparent;
+  position:absolute;
+  left: 18%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.convertBtn svg{
+    fill: var(--text-color);
+}
+
+
+@media (max-width:426px) {
+  .container{
+    height: 70%;
+    width: 90%;
+    #cityInput{
+      height: 18%;
+      width: 90%;
+      font-size:medium;
+    }
+    #searchBtn{
+      height: 18%;
+      width: 90%;
+      font-size: medium;
+    }    
+  }
+  #theme-switch{
+    height: 30px;
+    width: 30px;
+    top: 5px;
+    right: 5px;
+  }
+  h1{
+    font-size:x-large;
+  }
+  h3{
+    font-size:medium;
+  }
+  .convertBtn{
+    left: 8%;
+  }
+}
+
