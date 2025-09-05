@@ -4,6 +4,8 @@ let container = document.querySelector(".container");
 let result = document.querySelector("#weatherResult");
 let theme_switch= document.querySelector("#theme-switch");
 
+let key ="00a4e3e8828625c221b25b0965193ae8";  //Don't use this key its free so it's only has limited search per day. 
+
 let darkMode=localStorage.getItem('darkMode');
 
 
@@ -40,7 +42,7 @@ btn.addEventListener("click", () => {
     alert("Enter the city Name")
   }
   else{
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=00a4e3e8828625c221b25b0965193ae8`;
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
   container.style.height = "280px";
   showData(url);
   }
