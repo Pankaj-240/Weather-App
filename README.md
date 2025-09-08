@@ -27,11 +27,6 @@ It comes with **temperature conversion (°C / K)**, **dynamic weather icons**, a
 
 ---
 
-## 📷 Preview  
-![Weather App Screenshot](screenshot.png)  
-*(Add a screenshot of your app here)*  
-
----
 
 ## 📌 Usage  
 1. Open the [live demo](https://pankaj-240.github.io/Weather-App/).  
